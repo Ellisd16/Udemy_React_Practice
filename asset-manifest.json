@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/Udemy_React_Practice/static/js/main.bfd46862.chunk.js",
+    "main.js.map": "/Udemy_React_Practice/static/js/main.bfd46862.chunk.js.map",
+    "runtime-main.js": "/Udemy_React_Practice/static/js/runtime-main.b1894eb0.js",
+    "runtime-main.js.map": "/Udemy_React_Practice/static/js/runtime-main.b1894eb0.js.map",
+    "static/js/2.9f8782b3.chunk.js": "/Udemy_React_Practice/static/js/2.9f8782b3.chunk.js",
+    "static/js/2.9f8782b3.chunk.js.map": "/Udemy_React_Practice/static/js/2.9f8782b3.chunk.js.map",
+    "index.html": "/Udemy_React_Practice/index.html",
+    "static/js/2.9f8782b3.chunk.js.LICENSE.txt": "/Udemy_React_Practice/static/js/2.9f8782b3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b1894eb0.js",
+    "static/js/2.9f8782b3.chunk.js",
+    "static/js/main.bfd46862.chunk.js"
+  ]
+}
