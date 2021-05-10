@@ -1,34 +1,45 @@
 import React, { Component } from 'react';
+import '../styles/header.css'
 
 
-
-// let styles = {
-//     header: {
-//         background: "blue",
-//     },
-//     div: {
-//         color: "white",
-//         fontFamily: 'Anton',
-//         textAligin: 'center'
-//     }
-// }
 class Header extends Component {
 
-    inputChangeHandler(event, hello) {
-        console.log(event.target.value);
-        console.log(hello)
+    state = {
+        title: 'Super Cool Keywords: ',
+        keywords: '',
+        count: 0
+
+    }
+
+    inputChangeHandler = (event) => {
+        // console.log(event.target.value)
+        this.setState({ keywords: event.target.value })
+
+    }
+    addOne = (event) => {
+        this.setState({ count: this.state.count + 1 })
+    }
+    minusOne = (event) => {
+        this.setState({ count: this.state.count - 1 })
     }
 
 
     render() {
+        console.log(this.state)
         return (
             <header onClick={() => console.log('click me please')}>
                 <div className="logo">
                     logo
                 </div>
                 <input
-                    onChange={(e) => this.inputChangeHandler(e, 'hey')}
+                    onChange={this.inputChangeHandler}
                 />
+                <div>{this.state.title}</div>
+                <div> {this.state.keywords}</div>
+                <br />
+                <div>{this.state.count}</div>
+                <button onClick={() => this.addOne()}>Add One</button>
+                <button onClick={() => this.minusOne()}>Subtract One</button>
             </header>
         )
     }
