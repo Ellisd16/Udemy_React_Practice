@@ -5,9 +5,9 @@ import '../styles/header.css'
 class Header extends Component {
 
     state = {
-        title: 'Super Cool Keywords: ',
+
         keywords: '',
-        count: 0
+
 
     }
 
@@ -15,12 +15,6 @@ class Header extends Component {
         // console.log(event.target.value)
         this.setState({ keywords: event.target.value })
 
-    }
-    addOne = (event) => {
-        this.setState({ count: this.state.count + 1 })
-    }
-    minusOne = (event) => {
-        this.setState({ count: this.state.count - 1 })
     }
 
 
@@ -34,12 +28,10 @@ class Header extends Component {
                 <input
                     onChange={this.inputChangeHandler}
                 />
-                <div>{this.state.title}</div>
+
                 <div> {this.state.keywords}</div>
-                <br />
-                <div>{this.state.count}</div>
-                <button onClick={() => this.addOne()}>Add One</button>
-                <button onClick={() => this.minusOne()}>Subtract One</button>
+
+
             </header>
         )
     }
