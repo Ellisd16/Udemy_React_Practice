@@ -40,11 +40,12 @@ class App extends Component {
                         keywords={this.getKeywords}
                     // If you put () after getKeywords, the function will run as soon as the app starts
                     />
-                    <NewsList news={filtered}>
-                        {/* Creating children */}
+                    {/* Passing in children */}
+                    {/* <NewsList news={filtered}>
+                       
                         <br />
                         <h1>I am bebe</h1>
-                    </NewsList>
+                    </NewsList> */}
 
                     {this.state.active ?
                         <Life />
