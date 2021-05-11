@@ -1,15 +1,13 @@
 import React from 'react';
+import NewsItem from './news_list_item';
 
 const newsList = (props) => {
 
+    const news = props.news.map((item) => (
+        <NewsItem item={item} key={item.id} />))
     return (
         <div>
-            {props.news.map((item) => (
-                <div key={item.id}>
-                    <h3>{item.title}</h3>
-                    <p>{item.feed}</p>
-                </div>
-            ))}
+            {news}
         </div>
     )
 }
