@@ -21,9 +21,11 @@ class App extends Component {
             <div className='App'>
                 <div className='container'>
                     <Header />
-                    <NewsList
-                        news={news}
-                    />
+                    <NewsList news={news}>
+                        {/* Creating children */}
+                        <br />
+                        <h1>I am bebe</h1>
+                    </NewsList>
                     <Footer footerText={footerText} />
 
                 </div>

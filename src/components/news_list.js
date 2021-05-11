@@ -8,6 +8,8 @@ const newsList = (props) => {
     return (
         <div>
             {news}
+            {/* Passing in children */}
+            {props.children}
         </div>
     )
 }
