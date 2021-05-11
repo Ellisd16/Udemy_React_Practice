@@ -5,7 +5,7 @@ import '../styles/header.css'
 class Header extends Component {
 
     state = {
-
+        active: false,
         keywords: '',
 
 
@@ -13,23 +13,30 @@ class Header extends Component {
 
     inputChangeHandler = (event) => {
         // console.log(event.target.value)
-        this.setState({ keywords: event.target.value })
+        const value = event.target.value === '' ? 'not-active' : 'active';
+
+        this.setState({
+            active: value,
+            keywords: event.target.value
+        })
 
     }
 
 
     render() {
+
+
+
         console.log(this.state)
         return (
-            <header onClick={() => console.log('click me please')}>
+            // <header style={{ background: `${this.state.active ? 'green' : 'blue'}` }}>
+            <header className={this.state.active}>
                 <div className="logo">
                     logo
                 </div>
                 <input
                     onChange={this.inputChangeHandler}
                 />
-
-                <div> {this.state.keywords}</div>
 
 
             </header>

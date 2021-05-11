@@ -8,3 +8,10 @@ header{
     text-align: center;
     font-size: 40px;
 }
+.active{
+    background: green;
+}
+.notactive{
+    background: #03a9fa;
+   
+}
