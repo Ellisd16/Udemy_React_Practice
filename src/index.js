@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/header';
-import NewsList from './components/news_list'
+import NewsList from './components/news_list';
 import JSON from './db.json';
-import Footer from './components/footer'
+import Footer from './components/footer';
+import Life from './components/lifecycle';
 
 
 
@@ -11,7 +12,8 @@ class App extends Component {
     state = {
         news: JSON,
         filtered: JSON,
-        footerText: "I'm on a sick one FOO"
+        footerText: "I'm on a sick one FOO",
+        active: true
     }
     getKeywords = (event) => {
         console.log(event.target.value)
@@ -43,7 +45,15 @@ class App extends Component {
                         <br />
                         <h1>I am bebe</h1>
                     </NewsList>
+
+                    {this.state.active ?
+                        <Life />
+                        : null}
+
+                    <button onClick={() => this.setState({ active: !this.state.active })}>Action baybee!</button>
+
                     <Footer footerText={footerText} />
+
 
                 </div>
             </div>

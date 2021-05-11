@@ -1,0 +1,4 @@
+Component Lifecycles - way in which the react app loads; 
+                        can be manipulated through Lifecycle Methods
+                        ex: constructor(), ComponentDidMount(), render()
+                        Mounting, Updating
